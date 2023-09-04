@@ -7,7 +7,7 @@
   --cor-primaria: #095513;
   --cor-quarta: white;
   --cor-footer: #222e26;
-  --cor-verde-neom: #00ff00;
+  --cor-verde: #55f355;
 }
 
 body {
@@ -70,7 +70,7 @@ main {
   color: var(--cor-footer);
   transition: 0.3s ease;
   transform: scale(1.05);
-  border: 3px solid var(--cor-verde-neom);
+  border: 3px solid var(--cor-verde);
   box-shadow: 0 0 10px 10px rgba(185, 180, 180, 0.4);
 }
 
@@ -87,7 +87,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #414040;
+  /*background-color: #414040;*/
   color: white;
   padding: 15px 0;
   gap: 50px;
@@ -152,9 +152,11 @@ i:hover {
 }
 
 #git:hover {
+  margin: auto;
   color: #6f42c1;
 }
 #email:hover {
+  margin: auto;
   color: #ffa500;
 }
 
