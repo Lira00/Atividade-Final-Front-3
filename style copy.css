@@ -1,0 +1,523 @@
+:root {
+  --cor-primaria: #095513;
+  --cor-secundaria: grey;
+  --cor-footer: #1f2821;
+  --cor-toggle: #121212;
+  --cor-quarta: white;
+  --cor-terciaria: #f5f5f5;
+  --cor-list: #3994cc9b;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto",
+    "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-size: 12pt;
+  min-height: 100vh;
+  background-color: transparent;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  background-image: url(./images/FUNDO.jpg);
+  /* background-attachment: fixed;*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#api-link {
+  height: 2em;
+  width: 2em;
+  margin: 0.5em;
+  margin-left: calc(100vw - 2.5em);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+  margin: 0;
+  /*background-image: url(./images/FUNDO.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;*/
+}
+
+#img-topo {
+  width: 30px;
+  height: 30px;
+}
+
+header {
+  background-color: white;
+}
+
+#titulo {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+}
+
+header .logo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 8px; /* Ajuste a largura conforme necessário */
+  height: 4px; /* Isso mantém a proporção da imagem */
+}
+
+header h1 {
+  color: var(--cor-primaria);
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  width: 70%;
+}
+
+input {
+  border: none;
+  outline: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.inputInicial {
+  margin: auto;
+  width: 80%;
+  height: 3em;
+  border: 2.5px solid var(--cor-secundaria);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#campoBusca {
+  height: 94%;
+  width: 90%;
+  border-radius: inherit;
+  background-color: transparent !important;
+}
+
+#btnBuscar {
+  margin: auto;
+  height: 100%;
+  align-items: center;
+  color: green;
+  font-weight: 800;
+  background-color: green !important;
+}
+
+#resultadoDaBusca {
+  display: flex;
+  margin: -0.5em auto;
+  position: relative;
+  z-index: 1;
+  width: 70%;
+  padding: 2.5% 5%;
+  border-radius: 0.5em;
+  background-color: transparent;
+}
+
+#resultadoDaBusca img {
+  width: 10em;
+  height: 10em;
+  border-radius: 0.5em;
+}
+
+#opcoesBusca {
+  width: 100%;
+}
+
+.opcao-busca:hover {
+  cursor: pointer;
+  border-radius: 0.5em;
+  background-color: var(--cor-list);
+}
+#resultado {
+  width: 90%;
+  margin: auto;
+}
+
+main img {
+  height: 10em;
+  width: 10em;
+  border-radius: 0.5em;
+}
+
+#home {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.personagem {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--cor-terciaria);
+  width: 28em;
+  height: 17em;
+  gap: 1em;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1em;
+  box-shadow: 10px 10px 5px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.personagem:hover {
+  transform: scale(1.05); /* Aumenta o tamanho do card no hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adicione uma sombra sutileza */
+  /* Adicione outros estilos de hover aqui */
+}
+
+.personagem-imagem {
+  width: 50%;
+}
+
+.personagem-dados {
+  width: 50%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.personagem-dados h2 {
+  font-size: 1.9em;
+  font-weight: 800;
+  color: var(--cor-primaria);
+}
+
+.personagem-dados p span {
+  color: var(--cor-secundaria);
+}
+
+#pag {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5em 0;
+  gap: 5%;
+  font-weight: 500;
+}
+
+#numero-pa {
+  font-weight: 500;
+}
+
+.btn-page {
+  color: var(--cor-primaria);
+  padding: 0.5em 1em;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+#pagina-atual {
+  display: flex;
+  align-items: end;
+  margin-top: 5em;
+}
+
+#imagem-Rick-and-Morty {
+  margin: auto;
+  display: flex;
+  height: auto;
+  width: 30%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #414040;
+  color: white;
+  padding: 30px 0;
+  gap: 25px;
+}
+
+footer nav {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+}
+
+footer span {
+  font-weight: bolder;
+}
+
+footer span {
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+span:hover {
+  opacity: 1;
+  color: green;
+}
+
+#informacoes {
+  display: flex;
+  justify-content: center;
+  padding-top: 2em;
+  gap: 8%;
+  color: var(--cor-quarta);
+}
+
+#desenvolvedor {
+  color: var(--cor-quarta);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 2%;
+}
+
+#redesSociais {
+  /*margin: auto;*/
+  margin-bottom: 100px;
+  padding: 1.2em;
+}
+
+i {
+  color: var(--cor-quarta);
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  font-size: 1.5em;
+}
+
+i:hover {
+  font-size: 2.5em;
+}
+
+#git:hover {
+  color: #6f42c1;
+}
+#email:hover {
+  color: #ffa500;
+}
+
+#desenvolvedor p {
+  /*margin: auto;*/
+  margin-top: 20px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.7em;
+  height: 0.9em;
+}
+.exibirStatus {
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  background-color: var(--cor-secundaria);
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 9pt;
+  }
+
+  header h1 {
+    width: 70%;
+    font-size: 1.2em;
+  }
+
+  header img {
+    padding-top: 1em;
+  }
+
+  #resultadoDaBusca {
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+  }
+  #resultadoDaBusca img {
+    width: 7em;
+    height: 7em;
+  }
+
+  #opcoesBusca {
+    width: 88%;
+    margin: auto;
+  }
+
+  .personagem {
+    width: 100%;
+    height: 15em;
+  }
+  .personagem h2 {
+    font-size: 1em;
+  }
+
+  #pag {
+    margin: 1em 0;
+    gap: 1%;
+  }
+
+  #desenvolvedor {
+    margin-top: 7%;
+  }
+}
+
+@media (max-width: 360px) {
+  header h1 {
+    width: 80%;
+    font-size: 1.1em;
+  }
+
+  footer {
+    font-size: 8pt;
+    height: 17em;
+  }
+
+  #informacoes {
+    align-items: center;
+    flex-direction: column;
+    line-height: 0;
+  }
+
+  #desenvolvedor {
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+
+  #redesSociais {
+    margin: auto;
+    padding: 1em;
+    margin-top: 2%;
+  }
+}
+
+#theme-toggle {
+  color: var(--cor-toggle);
+  font-size: 2em;
+  margin-left: calc(100vw - 2.5em);
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+#theme-toggle:hover {
+  font-size: 2.1em;
+  color: inherit;
+}
+
+#theme-toggle.rotate {
+  transform: rotate(180deg);
+}
+@keyframes orbit7456 {
+  0% {
+  }
+
+  80% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.modal-dialog {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+@media (max-width: 840px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  .card {
+    min-height: 200px;
+  }
+
+  #imagem-card,
+  .card-body {
+    font-size: 0.7em;
+    min-height: 200px;
+  }
+
+  .modal-dialog {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 430px) {
+  body {
+    font-size: 16px;
+    background-attachment: fixed;
+  }
+  h1 {
+    font-size: 1.7em;
+  }
+
+  #location,
+  #episodio {
+    font-size: 0.6;
+  }
+  .modal-dialog {
+    font-size: 1.5em;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 375px) {
+  h1 {
+    font-size: 1.4em;
+  }
+  .card {
+    min-height: 160px;
+  }
+
+  #imagem-card,
+  .card-body {
+    font-size: 0.6em;
+    min-height: 160px;
+  }
+
+  .crad-body {
+    margin-top: 2px;
+  }
+
+  .modal-dialog img {
+    height: 200px;
+  }
+}
